@@ -92,14 +92,16 @@ summary(ny$Trip.Duration)
 
 ggplot(data = chi, aes(x = chi$Trip.Duration)) +
 geom_histogram(binwidth = 30, color = 'black', fill = '#099DD9') +
-scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) + labs(title="Distribution of trip duration in Chicago", x ="Trip duration", y = "Count")
+scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) 
++ labs(title="Distribution of trip duration in Chicago", x ="Trip duration", y = "Count")
 
 qplot(x = User.Type, y = Trip.Duration, data = subset(chi, !is.na(User.Type)), geom = 'boxplot', ylim = c(0, 10000)) + labs(title="Plot of trip duration by user type in Chicago", x ="User type", y = "Trip duration")
 
 
 ggplot(data = wash, aes(x = wash$Trip.Duration)) +
   geom_histogram(binwidth = 30, color = 'black', fill = '#099DD9') +
-scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) + labs(title="Distribution of trip duration in Washington", x ="Trip duration", y = "Count")
+scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) 
++ labs(title="Distribution of trip duration in Washington", x ="Trip duration", y = "Count")
 
 
 qplot(x = User.Type, y = Trip.Duration, data = subset(wash, !is.na(User.Type)), geom = 'boxplot', ylim = c(0, 10000)) + labs(title="Plot of trip duration by user type in Washington", x ="User type", y = "Trip duration")
@@ -107,7 +109,8 @@ qplot(x = User.Type, y = Trip.Duration, data = subset(wash, !is.na(User.Type)), 
 
 ggplot(data = ny, aes(x = ny$Trip.Duration)) +
   geom_histogram(binwidth = 30, color = 'black', fill = '#099DD9') +
-scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) + labs(title="Distribution of trip duration in New York", x ="Trip duration", y = "Count")
+scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 100)) 
++ labs(title="Distribution of trip duration in New York", x ="Trip duration", y = "Count")
 
 
 qplot(x = User.Type, y = Trip.Duration, data = subset(ny, !is.na(User.Type)), geom = 'boxplot', ylim = c(0, 10000)) + labs(title="Plot of trip duration by user type in New York", x ="User type", y = "Trip duration")
