@@ -8,6 +8,7 @@ head(wash)
 head(chi)
 
 #Most common day of the week
+
 # Chicago
 library(ggplot2)
 library(lubridate)
@@ -63,12 +64,14 @@ summary(chi$Birth.Year)
 library(ggplot2)
 ggplot(data = ny, aes(x = ny$Birth.Year)) +
   geom_histogram(binwidth = 1)+
-  scale_x_continuous(limits = c(1920, 2001), breaks = seq(1920, 2001, 10)) + labs(title="Distribution of user by birth year in New York", x ="Birth year", y = "Count")
+  scale_x_continuous(limits = c(1920, 2001), breaks = seq(1920, 2001, 10))
++ labs(title="Distribution of user by birth year in New York", x ="Birth year", y = "Count")
 
 
 ggplot( data = chi, aes(x = chi$Birth.Year)) +
   geom_histogram(binwidth = 1)+
-  scale_x_continuous(limits = c(1920, 2001), breaks = seq(1920, 2001, 10)) + labs(title="Distribution of user by birth year in Chicago", x ="Birth year", y = "Count")
+  scale_x_continuous(limits = c(1920, 2001), breaks = seq(1920, 2001, 10)) 
++ labs(title="Distribution of user by birth year in Chicago", x ="Birth year", y = "Count")
 
 
 
