@@ -2,7 +2,7 @@
 November 2019
 
 ### Project Title
-Replace the Project Title
+Post your work on Github
 
 ### Description
 Describe what your project is about and what it does
